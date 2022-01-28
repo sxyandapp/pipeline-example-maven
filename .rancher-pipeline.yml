@@ -1,10 +1,10 @@
 stages:
-#  - name: Build
-#    steps:
-#      - runScriptConfig:
-#          image: maven:3-jdk-7
-#          shellScript: |-
-#            mvn clean install
+  - name: Build
+    steps:
+      - runScriptConfig:
+          image: busybox:1.27
+          shellScript: |-
+            echo ${CICD_IMAGE}:${CICD_EXECUTION_SEQUENCE}
 #  - name: Publish
 #    steps:
 #      - publishImageConfig:
